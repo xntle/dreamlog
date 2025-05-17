@@ -128,7 +128,7 @@ This will populate the database with **10 sample dreams** (with images and tags)
 
 ---
 
-## 🔥 Development Server
+## Development Server
 
 ```bash
 php spark serve
@@ -156,7 +156,7 @@ Visit your app at `http://localhost:8080`.
 
 ---
 
-## 📚 Commands Summary
+## Commands Summary
 
 | Action              | Command                       |
 | ------------------- | ----------------------------- |
@@ -165,8 +165,4 @@ Visit your app at `http://localhost:8080`.
 | Seed Example Dreams | `php spark db:seed DreamSeed` |
 | Start Local Server  | `php spark serve`             |
 
----
-
-Would you also like me to write you a **`dreamlog.sql`** dump for quick import?
-If yes, just say `YES SQL`.
 
