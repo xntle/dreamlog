@@ -44,7 +44,6 @@ class DreamController extends BaseController
         helper(['form', 'url']);
 
         $model = new DreamModel();
-
         $title = $this->request->getPost('title');
         $content = $this->request->getPost('content');
         $tags = $this->request->getPost('tags');
@@ -135,23 +134,4 @@ class DreamController extends BaseController
         return view('dream/view', ['dream' => $dream]);
     }
 
-    /**
-     * Alternative method to display a dream by ID.
-     * Throws 404 with custom message if not found.
-     *
-     * @param int $id
-     * @return \CodeIgniter\HTTP\Response|string
-     * @throws \CodeIgniter\Exceptions\PageNotFoundException
-     */
-    public function show($id)
-    {
-        $model = new DreamModel();
-        $dream = $model->find($id);
-
-        if (!$dream) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Dream not found");
-        }
-
-        return view('dream/view', ['dream' => $dream]);
-    }
 }

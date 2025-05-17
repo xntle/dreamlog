@@ -146,7 +146,6 @@
 </header>
 
 <div class="main">
-    <!-- ✅ Tags container always on top -->
 
     <div class="title">Tell us about your dream.</div>
     <div id="tagsContainer"></div>
