@@ -66,4 +66,107 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# dreamlog
+
+# DreamLog
+
+DreamLog is a minimal dream journaling web app built with **CodeIgniter 4**.
+It allows users to log their dreams, optionally upload images, add tags, and view them on a calendar or a blog-style feed.
+
+---
+
+## Features
+
+* Add dreams with title, content, image, and tags.
+* View recent dreams in a grid.
+* Explore dreams on an interactive calendar.
+* Full dream details page with image, content, and tags.
+
+---
+
+## Setup Guide
+
+### 1. Clone the Project
+
+```bash
+git clone https://github.com/your-username/dreamlog.git
+cd dreamlog
+```
+
+### 2. Setup Environment
+
+Copy the example environment file and configure it:
+
+```bash
+cp env .env
+```
+
+Then edit `.env` and set your database connection details:
+
+```
+database.default.hostname = localhost
+database.default.database = dreamlog_db
+database.default.username = root
+database.default.password = yourpassword
+```
+
+
+### 3. Run Migrations
+
+```bash
+php spark migrate
+```
+
+This will create the `dreams` table.
+
+### 4. (Optional) Seed Example Dreams
+
+```bash
+php spark db:seed DreamSeed
+```
+
+This will populate the database with **10 sample dreams** (with images and tags).
+
+---
+
+## 🔥 Development Server
+
+```bash
+php spark serve
+```
+
+Visit your app at `http://localhost:8080`.
+
+---
+
+## Folder Structure
+
+* `app/Controllers` — App logic (e.g., DreamController)
+* `app/Models` — Database models (DreamModel)
+* `app/Views` — Views (home, calendar, create, view)
+* `public/uploads` — Uploaded dream images
+
+---
+
+## Tech Stack
+
+* PHP 8+
+* CodeIgniter 4
+* MySQL / MariaDB
+* HTML + CSS + JS (no frontend frameworks)
+
+---
+
+## 📚 Commands Summary
+
+| Action              | Command                       |
+| ------------------- | ----------------------------- |
+| Migrate DB          | `php spark migrate`           |
+| Rollback DB         | `php spark migrate:rollback`  |
+| Seed Example Dreams | `php spark db:seed DreamSeed` |
+| Start Local Server  | `php spark serve`             |
+
+---
+
+Would you also like me to write you a **`dreamlog.sql`** dump for quick import?
+If yes, just say `YES SQL`.
+
